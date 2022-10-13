@@ -21,7 +21,7 @@ class Document(models.Model):
 		return content
 
 class Query(models.Model):
-	qId = models.IntegerField()
+	qId = models.CharField(max_length=10)
 	text = models.CharField(max_length=250)
 	difficulty = models.IntegerField(blank=True, null=True)
 	comment = models.TextField(blank=True, null=True)
